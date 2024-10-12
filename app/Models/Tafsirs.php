@@ -10,4 +10,8 @@ class Tafsirs extends Model
     use HasFactory;
     protected $table = "tafsirs";
     protected $guard = ['id'];
+
+    public function verseTafsirs(){
+        return $this->hasMany(VerseTafsirs::class, 'id_tafsir', 'id');
+    }
 }

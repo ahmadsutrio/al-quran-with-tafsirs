@@ -14,4 +14,12 @@ class Ayat extends Model
     public function surah(){
         return $this->belongsTo(Surah::class, 'id_chapter', 'id');
     }
+
+    public function terjemah(){
+        return $this->hasMany(Terjemah::class, 'id_verse', 'id');
+    }
+
+    public function verseTafsirs(){
+        return $this->hasMany(VerseTafsirs::class, 'id_verse', 'id');
+    }
 }
