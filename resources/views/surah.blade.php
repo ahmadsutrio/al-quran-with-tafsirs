@@ -3,6 +3,7 @@
     Surah
 @endsection
 @section('content')
+{{-- @dd($data) --}}
     @foreach ($data as $ayat)
         <div class="card text-decoration-none text-end my-3">
             <div class="card-body w-100 ">
